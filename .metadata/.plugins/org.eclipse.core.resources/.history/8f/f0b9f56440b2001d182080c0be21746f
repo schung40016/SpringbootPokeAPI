@@ -1,0 +1,7 @@
+package Services;
+
+import Repository.IPokemonTypeRepository;
+
+public class PokemonTypeService {
+	private IPokemonTypeRepository _pokemonTypeRepository;
+}

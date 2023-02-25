@@ -1,0 +1,12 @@
+package Repository;
+
+import java.util.List;
+
+import Model.PokemonType;
+
+public class PokemonTypeRepository implements JpaRepository<PokemonType, int> {
+	public List<PokemonType> FetchPokemonTypeList()
+	{
+		
+	}
+}

@@ -1,0 +1,54 @@
+package DTOs;
+
+public class PokemonTypeDTO {
+	private int id = -1;
+	private String Name = "";
+	private String Strengths = "";
+	private String Weaknesses = "";
+	private String NoEffects = "";
+	
+	// Constructor
+	public PokemonTypeDTO() 
+	{
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public String getStrengths() {
+		return Strengths;
+	}
+
+	public void setStrengths(String strengths) {
+		Strengths = strengths;
+	}
+
+	public String getWeaknesses() {
+		return Weaknesses;
+	}
+
+	public void setWeaknesses(String weaknesses) {
+		Weaknesses = weaknesses;
+	}
+
+	public String getNoEffects() {
+		return NoEffects;
+	}
+
+	public void setNoEffects(String noEffects) {
+		NoEffects = noEffects;
+	}	
+}

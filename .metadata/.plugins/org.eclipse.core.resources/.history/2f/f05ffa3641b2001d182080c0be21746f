@@ -1,0 +1,25 @@
+package Services;
+
+import Repository.IPokemonTypeRepository;
+import org.apache.catalina.connector.Response;
+import DTOs.PokemonTypeDTO;
+
+public class PokemonTypeService {
+	private IPokemonTypeRepository _pokemonTypeRepository;
+	
+	public PokemonTypeService(IPokemonTypeRepository pokemonTypeRepository)
+	{
+		_pokemonTypeRepository = pokemonTypeRepository;
+	}
+	
+	public Response<List<PokemonTypeDTO>> FetchPokemonTypeList()
+	{
+		
+	}
+	
+	/*public Response<PokemonTypeDTO> GetPokemonType(int id)
+	{
+		return this.GetPokemonTypeFromStringOrInt(id + "");
+	}*/
+	
+}

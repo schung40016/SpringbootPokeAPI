@@ -1,0 +1,17 @@
+package Controllers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import DTOs.PokemonTypeDTO;
+import java.util.*;
+
+@Controller
+public class PokemonTypeController {
+	
+	@RequestMapping("api/PokemonTypes")
+	public ResponseEntity<List<PokemonTypeDTO>> GetPokemonTypes()
+	{
+		return ResponseEntity<List<PokemonTypeDTO>>;
+	}
+}

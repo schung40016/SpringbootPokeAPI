@@ -1,0 +1,34 @@
+package Services;
+
+import Repository.IPokemonTypeRepository;
+import org.apache.catalina.connector.Response;
+import DTOs.PokemonTypeDTO;
+
+public class PokemonTypeService {
+	private IPokemonTypeRepository _pokemonTypeRepository;
+	
+	public PokemonTypeService(IPokemonTypeRepository pokemonTypeRepository)
+	{
+		_pokemonTypeRepository = pokemonTypeRepository;
+	}
+	
+	public Response<List<PokemonTypeDTO>> FetchPokemonTypeList()
+	{
+		// Fetch list from repository.
+		var list = _pokemonTypeRepository.findAll();
+		
+		List<PokemonTypeDTO> tempList = list.forEach(x -> new PokemonTypeDTO(
+				x.getId(),
+				x.getName(),
+				x.getNoEffects(),
+				x.getStrengths(),
+				x.getWeaknesses()
+		));
+	}
+	
+	/*public Response<PokemonTypeDTO> GetPokemonType(int id)
+	{
+		return this.GetPokemonTypeFromStringOrInt(id + "");
+	}*/
+	
+}
